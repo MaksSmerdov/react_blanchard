@@ -47,6 +47,7 @@ export default function HeaderComponent() {
           </div>
         </div>
       </div>
+      
     </header>
   );
 }
