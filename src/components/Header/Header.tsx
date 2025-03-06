@@ -1,53 +1,73 @@
-import { useState } from 'react';
 import styles from './Header.module.scss';
 
 export default function HeaderComponent() {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
-  const handleClick = (index: number) => {
-    setActiveIndex(index);
-  };
-
   return (
-    <header>
-      <div className={`${styles['main-banner']}`}>
-        <div className={`${styles['header-container']}`}>
-          <div className={`${styles['header-container__top']}`}>
-            <div className={`${styles['logo']}`}>
-              <h1 className={`${styles['logo--upper']}`}>Blanchard</h1>
-              <span className={`${styles['logo--lower']}`}>художественная галерея</span>
-            </div>
-            <ul className={`${styles['text-block__list']}`}>
-              {['О нас', 'Галерея', 'Каталог', 'Событие', 'Проекты', 'Контакты'].map((item, index) => (
-                <li
-                  key={index}
-                  className={`${styles['text-block__item']} ${activeIndex === index ? styles['active'] : ''}`}
-                  onClick={() => handleClick(index)}
-                >
-                  <a className={`${styles['text-block__link']}`}>{item}</a>
+    <header className={`${styles['header__fixed']}`}>
+      <div className={`${styles['header__main-nav']}`}>
+        <div className={`${styles['container']} ${styles['header__container-main-nav']}`}>
+          <button className={`${styles['header__menu-burger']}`}></button>
+          <img className={`${styles['header__menu-logo']}`} src="/assets/svg/logo.svg" alt="logo" />
+          <form className={`${styles['header__form-btn']}`}></form>
+          <div className={`${styles['header__nav-menu']}`}>
+            <nav className={`${styles['header__nav-site']}`}>
+              <ul className={`${styles['header__nav-list']}`}>
+                <li className={`${styles['header__nav-item']}`}>
+                  <a className={`${styles['header__nav-link']}`} href="#">
+                    О нас
+                  </a>
                 </li>
-              ))}
-            </ul>
-            <div className={`${styles['button-block']}`}>
-              <button className={`${styles['button-block--name']}`}>Войти</button>
-            </div>
-          </div>
-          <div className={`${styles['header-container__bottom']}`}>
-            <div className={`${styles['header-button__container']}`}>
-              <button className={`${styles['header-button']}`}>Реализм</button>
-              <button className={`${styles['header-button']}`}>Импрессионизм</button>
-              <button className={`${styles['header-button']}`}>Постимпрессионизм</button>
-              <button className={`${styles['header-button']}`}>Авангард</button>
-              <button className={`${styles['header-button']}`}>Футуризм</button>
-            </div>
-
-            <div className={`${styles['header-input__container']}`}>
-              <input className={`${styles['header-input']}`} type="text" placeholder="Поиск по сайту" />
-            </div>
+                <li className={`${styles['header__nav-item']}`}>
+                  <a className={`${styles['header__nav-link']}`} href="#">
+                    Галерея
+                  </a>
+                </li>
+                <li className={`${styles['header__nav-item']}`}>
+                  <a className={`${styles['header__nav-link']}`} href="#">
+                    Каталог
+                  </a>
+                </li>
+                <li className={`${styles['header__nav-item']}`}>
+                  <a className={`${styles['header__nav-link']}`} href="#">
+                    События
+                  </a>
+                </li>
+                <li className={`${styles['header__nav-item']}`}>
+                  <a className={`${styles['header__nav-link']}`} href="#">
+                    Проекты
+                  </a>
+                </li>
+                <li className={`${styles['header__nav-item']}`}>
+                  <a className={`${styles['header__nav-link']}`} href="#">
+                    Контакты
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <button className={`${styles['header__nav-entrance']}`}>Войти</button>
           </div>
         </div>
       </div>
-      
+      <div className={`${styles['header__additional-nav']}`}>
+        <div className={`${styles['container']} ${styles['header__container-additional-nav']}`}>
+          <ul className={`${styles['header__additional-list']}`}>
+            <li className={`${styles['header__additional-item']}`}>
+              <button className={`${styles['header__additional-btn']}`}>Реализм</button>
+            </li>
+            <li className={`${styles['header__additional-item']}`}>
+              <button className={`${styles['header__additional-btn']}`}>Импрессионизм</button>
+            </li>
+            <li className={`${styles['header__additional-item']}`}>
+              <button className={`${styles['header__additional-btn']}`}>Постимпрессионизм</button>
+            </li>
+            <li className={`${styles['header__additional-item']}`}>
+              <button className={`${styles['header__additional-btn']}`}>Авангард</button>
+            </li>
+            <li className={`${styles['header__additional-item']}`}>
+              <button className={`${styles['header__additional-btn']}`}>Футуризм</button>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
   );
 }

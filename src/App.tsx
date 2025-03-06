@@ -1,5 +1,13 @@
-import MainBanner from './components/MainBanner/MainBanner';
+import IntroComponent from './components/Intro/Intro';
+import HeaderComponent from './components/Header/Header';
+import AboutUs from './components/AboutUs/AboutUs';
 
 export default function App() {
-  return <MainBanner />;
+  return (
+    <>
+      <HeaderComponent />
+      <IntroComponent />
+      <AboutUs />
+    </>
+  );
 }

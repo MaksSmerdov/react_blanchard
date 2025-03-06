@@ -1,0 +1,100 @@
+@use './variables' as vars;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Opensans', Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  list-style-type: none;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-shadow: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'OpenSans', sans-serif;
+  font-size: 18px;
+  outline: none;
+  margin: 0;
+}
+
+label {
+  display: block;
+}
+
+h1 {
+  font-size: 72px;
+  line-height: 98.05px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 48px;
+  line-height: 65.37px;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 16px;
+  line-height: 21.79px;
+  font-weight: 600;
+}
+
+p,
+span,
+a {
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.title-reset {
+  margin: 0;
+}
+
+.descr-reset {
+  margin: 0;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.btn-reset {
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+}
