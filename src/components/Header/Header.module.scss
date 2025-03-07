@@ -67,7 +67,14 @@
     font-size: 18px;
     color: vars.$white;
     font-weight: 600;
-    transition: color 0.3 ease-in-out;
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: #9d5cd0;
+      transition: color 0.3s ease-in-out;
+    }
+    &:active {
+      color: #6f3f94;
+    }
   }
   &-entrance {
     background-color: transparent;
@@ -93,34 +100,4 @@
 
 .header__additional-list {
   display: flex;
-}
-
-.header__additional-item {
-  margin-right: 96px;
-  padding: 23px 0;
-}
-
-.header__additional-btn {
-  display: flex;
-  align-items: center;
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: 400;
-  color: vars.$white;
-  transition: all 0.3s ease-in-out;
-
-  &::after {
-    display: inline-block;
-    margin-left: 5px;
-    content: '';
-    width: 7px;
-    height: 7px;
-    border-top: 1px solid vars.$white;
-    border-right: 1px solid vars.$white;
-    transform: rotate(135deg);
-    transition: all 0.3s ease-in-out;
-  }
 }
